@@ -40,6 +40,11 @@ srm7500libusb_la_SOURCES    = srm7500libusb.c
 srm7500libusb_la_LDFLAGS    = $(AM_LDFLAGS) @LIBUSB_LIBS@
 srm7500libusb_la_CFLAGS     = $(AM_CFLAGS) $(LIBUSB_CFLAGS)
 
+plugin_LTLIBRARIES          += xboxlibusb.la
+xboxlibusb_la_SOURCES       = xboxlibusb.c
+xboxlibusb_la_LDFLAGS       = $(AM_LDFLAGS) @LIBUSB_LIBS@
+xboxlibusb_la_CFLAGS        = $(AM_CFLAGS) $(LIBUSB_CFLAGS)
+
 if LINUX_KERNEL
 plugin_LTLIBRARIES          += commandir.la
 commandir_la_SOURCES        = commandir.c
